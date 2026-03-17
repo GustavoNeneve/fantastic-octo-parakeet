@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Os Meus Cursos</title>
+  <title>Meus Cursos</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -25,7 +25,7 @@ const CURSOS = [
     id: "pixel-art",
     titulo: "Pixel Arte",
     subtitulo: "Do zero ao Fakemon",
-    descricao: "Aprende os fundamentos da pixel art, animação, criação de monstros e o estilo Ken Sugimori para criar os teus próprios Fakemons.",
+    descricao: "Aprenda os fundamentos da pixel art, animação, criação de monstros e o estilo Ken Sugimori para criar os seus próprios Fakemons.",
     icone: Gamepad2,
     gradiente: "from-pink-500 via-purple-500 to-indigo-500",
     bgCard: "bg-gradient-to-br from-pink-50 to-purple-50",
@@ -41,7 +41,7 @@ const CURSOS = [
     id: "arte-digital",
     titulo: "Arte Digital",
     subtitulo: "Cenários, efeitos e portfólio",
-    descricao: "Aprende a criar cenários, tiles, efeitos especiais e projetos completos de arte digital — do conceito ao portfólio profissional.",
+    descricao: "Aprenda a criar cenários, tiles, efeitos especiais e projetos completos de arte digital — do conceito ao portfólio profissional.",
     icone: Palette,
     gradiente: "from-cyan-500 via-blue-500 to-violet-500",
     bgCard: "bg-gradient-to-br from-cyan-50 to-blue-50",
@@ -57,7 +57,7 @@ const CURSOS = [
     id: "anatomia",
     titulo: "Anatomia",
     subtitulo: "Estrutura e proporção",
-    descricao: "Domina as bases da anatomia humana e animal para dar vida aos teus personagens — proporções, musculatura, poses e muito mais.",
+    descricao: "Domine as bases da anatomia humana e animal para dar vida aos seus personagens — proporções, musculatura, poses e muito mais.",
     icone: Pencil,
     gradiente: "from-emerald-500 via-teal-500 to-cyan-500",
     bgCard: "bg-gradient-to-br from-emerald-50 to-teal-50",
@@ -73,7 +73,7 @@ const CURSOS = [
     id: "perspectiva",
     titulo: "Perspectiva",
     subtitulo: "Profundidade e espaço",
-    descricao: "Aprende a construir cenários e mundos com perspectiva a 1, 2 e 3 pontos, isometria e técnicas de composição visual.",
+    descricao: "Aprenda a construir cenários e mundos com perspectiva a 1, 2 e 3 pontos, isometria e técnicas de composição visual.",
     icone: Layers,
     gradiente: "from-amber-500 via-orange-500 to-red-500",
     bgCard: "bg-gradient-to-br from-amber-50 to-orange-50",
@@ -180,18 +180,18 @@ function App() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-pixel tracking-wider drop-shadow-lg text-white">
-            Os Meus Cursos
+            Meus Cursos
           </h1>
           <h2 className="text-2xl md:text-3xl font-pixel text-pink-100 drop-shadow-md bg-black/20 inline-block px-6 py-2 rounded-full">
             Para o meu Mozinho ❤️
           </h2>
           <p className="text-white/80 text-lg font-medium max-w-xl mx-auto">
-            Escolhe o teu curso e começa a aprender ao teu próprio ritmo. Vai do zero ao incrível!
+            Escolha o seu curso e comece a aprender no seu próprio ritmo. Vai do zero ao incrível!
           </p>
         </div>
       </header>
 
-      {/* Grelha de Cursos */}
+      {/* Grade de Cursos */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 mt-[-5rem] relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {CURSOS.map(curso => (
@@ -204,7 +204,7 @@ function App() {
         <p className="font-pixel text-xl flex justify-center items-center space-x-2">
           <span>Desenvolvido com</span>
           <Heart size={20} className="text-pink-500 fill-current animate-pulse" />
-          <span>para ti</span>
+          <span>para você</span>
         </p>
       </footer>
     </div>

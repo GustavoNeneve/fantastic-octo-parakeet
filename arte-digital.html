@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,7 @@
 // DADOS DO CURSO
 // ==========================================
 
-const MENSAGEM_INICIAL = `Olá, mozinho! ❤️\n\nPreparei este cantinho de arte digital para ti! Aqui vais encontrar tudo sobre criação de cenários, efeitos especiais e projetos completos — não só pixel art, mas arte digital em geral.\n\nCada módulo tem um foco diferente, para ires evoluindo passo a passo. Vai ao teu ritmo, amo-te!`;
+const MENSAGEM_INICIAL = `Olá, mozinho! ❤️\n\nPreparei este cantinho de arte digital para você! Aqui você vai encontrar tudo sobre criação de cenários, efeitos especiais e projetos completos — não só pixel art, mas arte digital em geral.\n\nCada módulo tem um foco diferente, para você ir evoluindo passo a passo. Vai no seu ritmo, amo você!`;
 
 const MODULOS = [
   {
@@ -31,7 +31,7 @@ const MODULOS = [
     cor: "text-sky-500",
     bgCor: "bg-sky-100",
     borderCor: "border-sky-400",
-    resumo: "Construção de mapas e cenários em arte digital. Criação de tilesets, plataformas, fundos (backgrounds) e ambientes para jogos 2D. Aprende a combinar tiles e criar profundidade visual nos teus mundos.",
+    resumo: "Construção de mapas e cenários em arte digital. Criação de tilesets, plataformas, fundos (backgrounds) e ambientes para jogos 2D. Aprenda a combinar tiles e criar profundidade visual nos seus mundos.",
     videos: [
       { id: "bhjJpVAB-Qs", titulo: "Como Criar Cenários em Arte Digital", autor: "Tutorial Arte Digital" },
       { id: "ntXC1YuOjP4", titulo: "Tilesets e Mapas para Jogos 2D", autor: "Tutorial Arte Digital" },
@@ -50,7 +50,7 @@ const MODULOS = [
     cor: "text-yellow-500",
     bgCor: "bg-yellow-100",
     borderCor: "border-yellow-400",
-    resumo: "Criação de efeitos visuais em arte digital: explosões, fogo, água, magia, fumo e partículas. Técnicas de animação de efeitos especiais para tornar os teus projetos mais dinâmicos e expressivos.",
+    resumo: "Criação de efeitos visuais em arte digital: explosões, fogo, água, magia, fumaça e partículas. Técnicas de animação de efeitos especiais para tornar os seus projetos mais dinâmicos e expressivos.",
     videos: [
       { id: "oqWF0R_ytg4", titulo: "Efeitos de Fogo e Chamas", autor: "Tutorial Arte Digital" },
       { id: "tEMpR_6poUg", titulo: "Explosões e Impactos em Arte Digital", autor: "Tutorial Arte Digital" },
@@ -124,7 +124,7 @@ const VideoCard = ({ video, concluido, onToggle }) => (
         }`}
       >
         {concluido ? <CheckCircle2 size={18} /> : <Circle size={18} />}
-        <span>{concluido ? 'Aula Concluída' : 'Marcar como vista'}</span>
+        <span>{concluido ? 'Aula Concluída' : 'Marcar como assistida'}</span>
       </button>
     </div>
   </div>
@@ -264,7 +264,7 @@ function App() {
             {/* Barra de Progresso Global */}
             <div className="mt-6 pt-6 border-t border-slate-100">
               <div className="flex justify-between items-end mb-2">
-                <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">O teu Progresso</span>
+                <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">O seu Progresso</span>
                 <span className="text-2xl font-pixel text-cyan-500">{progressoPercentual}%</span>
               </div>
               <div className="w-full bg-slate-100 rounded-full h-4 overflow-hidden border border-slate-200 shadow-inner">
@@ -303,7 +303,7 @@ function App() {
         <p className="font-pixel text-xl flex justify-center items-center space-x-2">
           <span>Desenvolvido com</span>
           <Heart size={20} className="text-cyan-500 fill-current animate-pulse" />
-          <span>para ti</span>
+          <span>para você</span>
         </p>
       </footer>
     </div>
