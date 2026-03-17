@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,7 @@
 // DADOS DO CURSO
 // ==========================================
 
-const MENSAGEM_INICIAL = `Olá, mozinho! ❤️\n\nPreparei este cantinho especial baseado no plano de estudos que organizámos. A pixel art pode parecer intimidadora, cheia de "jaggies", "doubles" e limites de cores, mas a ideia aqui é ir do micro ao macro. Separei o conteúdo em módulos para não te perderes, focando nas ferramentas, na anatomia e até na criação dos teus próprios Fakemons.\n\nVai ao teu ritmo, amo-te!`;
+const MENSAGEM_INICIAL = `Olá, mozinho! ❤️\n\nPreparei este cantinho especial baseado no plano de estudos que organizamos. A pixel art pode parecer intimidadora, cheia de "jaggies", "doubles" e limites de cores, mas a ideia aqui é ir do micro ao macro. Separei o conteúdo em módulos para você não se perder, focando nas ferramentas, na anatomia e até na criação dos seus próprios Fakemons.\n\nVai no seu ritmo, amo você!`;
 
 const MODULOS = [
   {
@@ -46,7 +46,7 @@ const MODULOS = [
     cor: "text-emerald-500",
     bgCor: "bg-emerald-100",
     borderCor: "border-emerald-400",
-    resumo: "Compreensão da geometria do pixel. Eliminação de Doubles (cantos duplos) e engenharia dos Jaggies (serrilhados). Além disso, a aplicação essencial do Hue Shifting (Deslocamento de Matiz) e controlo de Dithering.",
+    resumo: "Compreensão da geometria do pixel. Eliminação de Doubles (cantos duplos) e engenharia dos Jaggies (serrilhados). Além disso, a aplicação essencial do Hue Shifting (Deslocamento de Matiz) e controle de Dithering.",
     videos: [
       { id: "OhXDQ_4rBRY", titulo: "Guia Completo: Ficheiros e Guardar", autor: "Capitão Dinossauro" },
       { id: "CX-6OOLlxTQ", titulo: "Guia Completo: Cores e Paletas", autor: "Capitão Dinossauro" },
@@ -76,7 +76,7 @@ const MODULOS = [
     cor: "text-rose-500",
     bgCor: "bg-rose-100",
     borderCor: "border-rose-400",
-    resumo: "Design criativo de criaturas e monstros. Aprende a quebrar as regras da anatomia humana, combinar membros de animais e construir seres sobrenaturais e assustadores com técnicas progressivas de pixel art.",
+    resumo: "Design criativo de criaturas e monstros. Aprenda a quebrar as regras da anatomia humana, combinar membros de animais e construir seres sobrenaturais e assustadores com técnicas progressivas de pixel art.",
     videos: [
       { id: "rKm2meA1Xnw", titulo: "Como Desenhar Monstros e Criaturas", autor: "Desenhando com Mack" },
       { id: "DtG0iLTbJ8M", titulo: "Como Fazer um Monstrão em Pixel Art", autor: "lLoboAzull" },
@@ -141,7 +141,7 @@ const VideoCard = ({ video, concluido, onToggle }) => (
         }`}
       >
         {concluido ? <CheckCircle2 size={18} /> : <Circle size={18} />}
-        <span>{concluido ? 'Aula Concluída' : 'Marcar como vista'}</span>
+        <span>{concluido ? 'Aula Concluída' : 'Marcar como assistida'}</span>
       </button>
     </div>
   </div>
@@ -281,7 +281,7 @@ function App() {
             {/* Barra de Progresso Global */}
             <div className="mt-6 pt-6 border-t border-slate-100">
               <div className="flex justify-between items-end mb-2">
-                <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">O teu Progresso</span>
+                <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">O seu Progresso</span>
                 <span className="text-2xl font-pixel text-pink-500">{progressoPercentual}%</span>
               </div>
               <div className="w-full bg-slate-100 rounded-full h-4 overflow-hidden border border-slate-200 shadow-inner">
@@ -320,7 +320,7 @@ function App() {
         <p className="font-pixel text-xl flex justify-center items-center space-x-2">
           <span>Desenvolvido com</span>
           <Heart size={20} className="text-pink-500 fill-current animate-pulse" />
-          <span>para ti</span>
+          <span>para você</span>
         </p>
       </footer>
     </div>
