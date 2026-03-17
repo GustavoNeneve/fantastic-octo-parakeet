@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Pixel Arte</title>
+  <title>Os Meus Cursos</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -14,67 +14,60 @@
 <body>
   <div id="root"></div>
   <script type="text/babel">
-    const { useState, useEffect } = React;
-    const { Heart, Gamepad2, BookOpen, Sparkles, PlayCircle, MonitorPlay, Palette, Ghost, Zap, ChevronDown, ChevronUp, CheckCircle2, Circle } = LucideReact;
+    const { Heart, Gamepad2, Sparkles, ArrowRight, Clock, BookOpen, Pencil, Layers } = LucideReact;
 
 // ==========================================
-// DADOS DO CURSO
+// DADOS DOS CURSOS
 // ==========================================
 
-const MENSAGEM_INICIAL = `Olá, mozinho! ❤️\n\nPreparei este cantinho especial baseado no plano de estudos que organizámos. A pixel art pode parecer intimidadora, cheia de "jaggies", "doubles" e limites de cores, mas a ideia aqui é ir do micro ao macro. Separei o conteúdo em módulos para não te perderes, focando nas ferramentas, na anatomia e até na criação dos teus próprios Fakemons.\n\nVai ao teu ritmo, amo-te!`;
-
-const MODULOS = [
+const CURSOS = [
   {
-    id: 1,
-    titulo: "Fundamentos & Ferramentas",
-    icone: MonitorPlay,
-    cor: "text-blue-500",
-    bgCor: "bg-blue-100",
-    borderCor: "border-blue-400",
-    resumo: "Aclimatação ao ambiente de software. O padrão de ouro é o Aseprite. O foco inicial é trabalhar com restrições claustrofóbicas (16x16 ou 32x32) para focar na silhueta e abandonar detalhes irrelevantes.",
-    videos: [
-      { id: "fkqUErsXRpg", titulo: "Guia Completo: Aseprite", autor: "Capitão Dinossauro" },
-      { id: "rVI8lotVTn4", titulo: "O melhor programa: Aseprite", autor: "Papo de Player" }
-    ]
+    id: "pixel-art",
+    titulo: "Pixel Arte",
+    subtitulo: "Do zero ao Fakemon",
+    descricao: "Aprende os fundamentos da pixel art, animação, criação de monstros e o estilo Ken Sugimori para criar os teus próprios Fakemons.",
+    icone: Gamepad2,
+    gradiente: "from-pink-500 via-purple-500 to-indigo-500",
+    bgCard: "bg-gradient-to-br from-pink-50 to-purple-50",
+    borderCor: "border-purple-200",
+    btnCor: "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700",
+    link: "pixel-art.html",
+    disponivel: true,
+    modulos: 5,
+    videos: 15,
+    etiqueta: "Disponível"
   },
   {
-    id: 2,
-    titulo: "Sintaxe Visual, Linhas e Cores",
-    icone: Palette,
-    cor: "text-emerald-500",
-    bgCor: "bg-emerald-100",
-    borderCor: "border-emerald-400",
-    resumo: "Compreensão da geometria do pixel. Eliminação de Doubles (cantos duplos) e engenharia dos Jaggies (serrilhados). Além disso, a aplicação essencial do Hue Shifting (Deslocamento de Matiz) e controlo de Dithering.",
-    videos: [
-      { id: "OhXDQ_4rBRY", titulo: "Guia Completo: Ficheiros e Guardar", autor: "Capitão Dinossauro" },
-      { id: "tko2S1BjBjU", titulo: "Dominar a Pixel Art - Conceitos", autor: "Papo de Player" }
-    ]
+    id: "anatomia",
+    titulo: "Anatomia",
+    subtitulo: "Estrutura e proporção",
+    descricao: "Domina as bases da anatomia humana e animal para dar vida aos teus personagens — proporções, musculatura, poses e muito mais.",
+    icone: Pencil,
+    gradiente: "from-emerald-500 via-teal-500 to-cyan-500",
+    bgCard: "bg-gradient-to-br from-emerald-50 to-teal-50",
+    borderCor: "border-teal-200",
+    btnCor: "bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700",
+    link: "#",
+    disponivel: false,
+    modulos: null,
+    videos: null,
+    etiqueta: "Em breve"
   },
   {
-    id: 3,
-    titulo: "Animação & Princípios Físicos",
-    icone: Zap,
-    cor: "text-amber-500",
-    bgCor: "bg-amber-100",
-    borderCor: "border-amber-400",
-    resumo: "Os 12 princípios adaptados à baixa resolução. Criação de Ciclos Ociosos (Idle), Caminhada (Walk/Run), o uso da Manobra de Borrão (Smear Frames) para combates e Antecipação de movimento.",
-    videos: [
-      { id: "UpR6dznvhSI", titulo: "Inserir e Animar Sprites", autor: "Papo de Player" },
-      { id: "u2r-xVrM4xw", titulo: "Fundamentos para Jogos", autor: "Papo de Player" }
-    ]
-  },
-  {
-    id: 4,
-    titulo: "Ecossistema Fakemon & Criaturas",
-    icone: Ghost,
-    cor: "text-purple-500",
-    bgCor: "bg-purple-100",
-    borderCor: "border-purple-400",
-    resumo: "O ápice da prática. A emulação do estilo Ken Sugimori (Pokémon), abstração orgânica, regra do pixel duplo, e a controversa porém útil técnica de Splicing (montagem Frankenstein).",
-    videos: [
-      { id: "WQ9cTeZV8mg", titulo: "Os 4 passos da artwork Sugimori", autor: "Kosta Artist" },
-      { id: "Se8Aa082Jz4", titulo: "COMO CRIAR FAKEMON! Traço e Estilo", autor: "Vinicius Sem Acento" }
-    ]
+    id: "perspectiva",
+    titulo: "Perspectiva",
+    subtitulo: "Profundidade e espaço",
+    descricao: "Aprende a construir cenários e mundos com perspectiva a 1, 2 e 3 pontos, isometria e técnicas de composição visual.",
+    icone: Layers,
+    gradiente: "from-amber-500 via-orange-500 to-red-500",
+    bgCard: "bg-gradient-to-br from-amber-50 to-orange-50",
+    borderCor: "border-orange-200",
+    btnCor: "bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700",
+    link: "#",
+    disponivel: false,
+    modulos: null,
+    videos: null,
+    etiqueta: "Em breve"
   }
 ];
 
@@ -82,143 +75,74 @@ const MODULOS = [
 // COMPONENTES
 // ==========================================
 
-const VideoCard = ({ video, concluido, onToggle }) => (
-  <div className={`bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border-2 flex flex-col group relative ${concluido ? 'border-green-400 opacity-90' : 'border-slate-200'}`}>
-    
-    {/* Player de Vídeo com correção ReferrerPolicy */}
-    <div className={`relative w-full pt-[56.25%] bg-slate-900 border-b-2 ${concluido ? 'border-green-400' : 'border-pink-200'}`}>
-      <iframe
-        className="absolute top-0 left-0 w-full h-full"
-        src={`https://www.youtube.com/embed/${video.id}?rel=0`}
-        title={video.titulo}
-        referrerPolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
-
-    {/* Informações do Vídeo & Checklist */}
-    <div className="p-4 flex-grow flex flex-col justify-between bg-white z-0">
-      <div>
-        <h4 className="font-bold text-slate-800 leading-snug group-hover:text-pink-600 transition-colors">
-          {video.titulo}
-        </h4>
-        <div className="flex items-center space-x-2 mt-2 text-sm text-slate-500">
-          <PlayCircle size={14} className="text-pink-400" />
-          <span className="font-medium">{video.autor}</span>
-        </div>
-      </div>
-
-      {/* Botão de Checklist */}
-      <button 
-        onClick={() => onToggle(video.id)}
-        className={`mt-4 flex items-center justify-center space-x-2 w-full py-2.5 rounded-lg transition-colors text-sm font-bold ${
-          concluido 
-            ? 'bg-green-100 text-green-700 hover:bg-green-200 border border-green-300' 
-            : 'bg-slate-50 text-slate-600 hover:bg-pink-50 hover:text-pink-600 border border-slate-200 hover:border-pink-200'
-        }`}
-      >
-        {concluido ? <CheckCircle2 size={18} /> : <Circle size={18} />}
-        <span>{concluido ? 'Aula Concluída' : 'Marcar como vista'}</span>
-      </button>
-    </div>
-  </div>
-);
-
-const ModuloSection = ({ modulo, aulasVistas, onToggleVideo }) => {
-  const [expandido, setExpandido] = useState(true);
-  const Icone = modulo.icone;
-  
-  // Calcula o progresso do módulo atual
-  const totalModulo = modulo.videos.length;
-  const concluidosModulo = modulo.videos.filter(v => aulasVistas.includes(v.id)).length;
-
+const CursoCard = ({ curso }) => {
+  const Icone = curso.icone;
   return (
-    <div className={`mb-8 bg-white rounded-2xl border-2 ${modulo.borderCor} shadow-sm overflow-hidden`}>
-      <div 
-        className={`p-5 flex items-center justify-between cursor-pointer ${modulo.bgCor} hover:opacity-90 transition-opacity`}
-        onClick={() => setExpandido(!expandido)}
-      >
-        <div className="flex items-center space-x-4">
-          <div className={`p-3 bg-white rounded-xl shadow-sm ${modulo.cor}`}>
-            <Icone size={24} />
+    <div className={`rounded-3xl border-2 ${curso.borderCor} ${curso.bgCard} shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group`}>
+      {/* Cabeçalho colorido */}
+      <div className={`bg-gradient-to-r ${curso.gradiente} p-8 text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1.5px, transparent 1.5px)', backgroundSize: '16px 16px' }}></div>
+        <div className="relative z-10 flex items-center justify-between">
+          <div className="bg-white/20 p-4 rounded-2xl backdrop-blur-sm border border-white/30 shadow-lg">
+            <Icone size={40} className="text-white drop-shadow" />
           </div>
-          <div>
-            <h3 className="text-2xl font-bold text-slate-800">
-              {modulo.titulo}
-            </h3>
-            <p className="text-sm font-semibold text-slate-600 opacity-80 mt-1">
-              Progresso: {concluidosModulo}/{totalModulo} aulas
-            </p>
-          </div>
+          <span className={`text-sm font-bold px-3 py-1 rounded-full backdrop-blur-sm border border-white/30 shadow ${curso.disponivel ? 'bg-white/20 text-white' : 'bg-black/20 text-white/80'}`}>
+            {curso.etiqueta}
+          </span>
         </div>
-        <button className="text-slate-600 p-2 hover:bg-white/50 rounded-full transition-colors">
-          {expandido ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
-        </button>
+        <h3 className="mt-5 text-4xl font-pixel tracking-wider drop-shadow">{curso.titulo}</h3>
+        <p className="text-white/80 font-semibold mt-1">{curso.subtitulo}</p>
       </div>
 
-      {expandido && (
-        <div className="p-6 bg-white animate-in slide-in-from-top-2 duration-300">
-          <div className="mb-6 flex space-x-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
-            <BookOpen size={20} className="text-slate-400 shrink-0 mt-1" />
-            <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-              <strong>Foco Pedagógico:</strong> {modulo.resumo}
-            </p>
-          </div>
+      {/* Corpo do card */}
+      <div className="p-6 flex flex-col flex-grow">
+        <p className="text-slate-600 leading-relaxed flex-grow">{curso.descricao}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {modulo.videos.map((video) => (
-              <VideoCard 
-                key={video.id} 
-                video={video} 
-                concluido={aulasVistas.includes(video.id)}
-                onToggle={onToggleVideo}
-              />
-            ))}
+        {/* Metadados */}
+        {curso.disponivel && (
+          <div className="mt-4 flex items-center space-x-4 text-sm text-slate-500">
+            <div className="flex items-center space-x-1">
+              <BookOpen size={14} />
+              <span><strong>{curso.modulos}</strong> módulos</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <Clock size={14} />
+              <span><strong>{curso.videos}</strong> vídeos</span>
+            </div>
           </div>
+        )}
+
+        {/* Botão */}
+        <div className="mt-6">
+          {curso.disponivel ? (
+            <a
+              href={curso.link}
+              className={`flex items-center justify-center space-x-2 w-full py-3 rounded-xl text-white font-bold transition-all duration-200 shadow-md hover:shadow-lg ${curso.btnCor}`}
+            >
+              <span>Começar Agora</span>
+              <ArrowRight size={18} />
+            </a>
+          ) : (
+            <div className="flex items-center justify-center space-x-2 w-full py-3 rounded-xl bg-slate-100 text-slate-400 font-bold border border-slate-200 cursor-not-allowed">
+              <Clock size={18} />
+              <span>Em breve...</span>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };
 
 function App() {
-  // Estado para guardar os IDs dos vídeos concluídos (Persistido no LocalStorage)
-  const [aulasVistas, setAulasVistas] = useState(() => {
-    try {
-      const saved = localStorage.getItem('pixelArtMozinhoProgress');
-      return saved ? JSON.parse(saved) : [];
-    } catch (e) {
-      return [];
-    }
-  });
-
-  // Salva no LocalStorage sempre que o estado muda
-  useEffect(() => {
-    localStorage.setItem('pixelArtMozinhoProgress', JSON.stringify(aulasVistas));
-  }, [aulasVistas]);
-
-  // Alterna o status do vídeo
-  const toggleVideo = (videoId) => {
-    setAulasVistas(prev => 
-      prev.includes(videoId) 
-        ? prev.filter(id => id !== videoId) 
-        : [...prev, videoId]
-    );
-  };
-
-  // Cálculo de Progresso Global
-  const totalVideos = MODULOS.reduce((acc, modulo) => acc + modulo.videos.length, 0);
-  const progressoPercentual = Math.round((aulasVistas.length / totalVideos) * 100) || 0;
-
   return (
-    <div className="min-h-screen bg-pink-50 text-slate-800 font-sans selection:bg-pink-300 selection:text-pink-900 pb-12">
+    <div className="min-h-screen bg-pink-50 text-slate-800 font-sans selection:bg-pink-300 selection:text-pink-900 pb-16">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=VT323&family=Nunito:wght@400;600;700&display=swap');
           .font-pixel { font-family: 'VT323', monospace; }
           .font-sans { font-family: 'Nunito', sans-serif; }
-          
+
           ::-webkit-scrollbar { width: 8px; }
           ::-webkit-scrollbar-track { background: #fdf2f8; }
           ::-webkit-scrollbar-thumb { background: #f472b6; border-radius: 4px; }
@@ -226,72 +150,38 @@ function App() {
         `}
       </style>
 
-      <header className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white pt-16 pb-24 px-6 shadow-lg relative overflow-hidden">
+      {/* Hero */}
+      <header className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white pt-16 pb-28 px-6 shadow-lg relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)', backgroundSize: '20px 20px' }}></div>
-        
-        <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+
+        <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
           <div className="flex justify-center items-center space-x-4 animate-bounce">
             <Heart size={36} className="text-pink-200 fill-current" />
             <div className="bg-white/20 p-4 rounded-2xl backdrop-blur-sm border border-white/30 shadow-xl">
-               <Gamepad2 size={56} className="text-white drop-shadow-md" />
+              <Sparkles size={52} className="text-white drop-shadow-md" />
             </div>
             <Heart size={36} className="text-pink-200 fill-current" />
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-pixel tracking-wider drop-shadow-lg text-white">
-            Curso de Pixel Arte
+            Os Meus Cursos
           </h1>
           <h2 className="text-2xl md:text-3xl font-pixel text-pink-100 drop-shadow-md bg-black/20 inline-block px-6 py-2 rounded-full">
-            Para o meu Mozinho
+            Para o meu Mozinho ❤️
           </h2>
+          <p className="text-white/80 text-lg font-medium max-w-xl mx-auto">
+            Escolhe o teu curso e começa a aprender ao teu próprio ritmo. Vai do zero ao incrível!
+          </p>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 space-y-8 mt-[-4rem] relative z-20">
-        
-        <section className="bg-white rounded-3xl p-8 shadow-xl border-4 border-pink-100 flex flex-col md:flex-row gap-6 items-center">
-          <div className="bg-pink-100 p-6 rounded-full shrink-0 animate-pulse">
-            <Sparkles className="text-pink-500" size={48} />
-          </div>
-          <div className="prose prose-lg text-slate-700 leading-relaxed whitespace-pre-wrap font-medium w-full">
-            {MENSAGEM_INICIAL}
-            
-            {/* Barra de Progresso Global */}
-            <div className="mt-6 pt-6 border-t border-slate-100">
-              <div className="flex justify-between items-end mb-2">
-                <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">O teu Progresso</span>
-                <span className="text-2xl font-pixel text-pink-500">{progressoPercentual}%</span>
-              </div>
-              <div className="w-full bg-slate-100 rounded-full h-4 overflow-hidden border border-slate-200 shadow-inner">
-                <div 
-                  className="bg-gradient-to-r from-pink-400 to-purple-500 h-4 rounded-full transition-all duration-700 ease-out"
-                  style={{ width: `${progressoPercentual}%` }}
-                ></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pt-8">
-          <div className="flex items-center justify-center space-x-3 mb-10">
-            <div className="h-1 w-12 bg-purple-300 rounded-full"></div>
-            <h2 className="text-4xl font-pixel text-purple-600 text-center uppercase tracking-widest">
-              Trilha de Estudos
-            </h2>
-            <div className="h-1 w-12 bg-purple-300 rounded-full"></div>
-          </div>
-
-          <div className="space-y-6">
-            {MODULOS.map(modulo => (
-              <ModuloSection 
-                key={modulo.id} 
-                modulo={modulo} 
-                aulasVistas={aulasVistas}
-                onToggleVideo={toggleVideo}
-              />
-            ))}
-          </div>
-        </section>
+      {/* Grelha de Cursos */}
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 mt-[-5rem] relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {CURSOS.map(curso => (
+            <CursoCard key={curso.id} curso={curso} />
+          ))}
+        </div>
       </main>
 
       <footer className="mt-16 text-center text-slate-500">
